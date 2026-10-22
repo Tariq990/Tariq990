@@ -1,0 +1,99 @@
+{
+  "name": "Lead Intake & Validation — Safe Dry Run (Demo Only)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "d3b1d63a-80dd-411d-91a2-bd4f3f047b01",
+      "name": "Run Demo Manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return [\n { json: { eventId: 'evt_demo_001', email: 'alice@example.invalid', name: '  Alice  ', source: 'sample-form' } },\n { json: { eventId: 'evt_demo_002', email: 'bad-address', name: 'Bob', source: 'sample-form' } },\n { json: { eventId: 'evt_demo_001', email: 'alice@example.invalid', name: 'Alice', source: 'sample-form' } },\n { json: { eventId: 'evt_demo_003', email: 'charlie@example.invalid', name: 'Charlie', source: 'sample-form' } },\n];"
+      },
+      "id": "43da56bf-8206-4c50-9a9a-82b7168fcfd0",
+      "name": "Generate Synthetic Form Events",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        470,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const seen = new Set();\nreturn $input.all().map((item) => {\n const event = item.json || {};\n const eventId = String(event.eventId ?? '').trim();\n const email = String(event.email ?? '').trim().toLowerCase();\n const name = String(event.name ?? '').trim();\n const isEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n let status = 'ready';\n let reason = 'Validated synthetic record';\n if (!eventId || !isEmail || !name) {\n   status = 'invalid'; reason = 'Missing eventId/name or invalid email';\n } else if (seen.has(eventId)) {\n   status = 'duplicate'; reason = 'Duplicate eventId in this execution';\n }\n if (eventId) seen.add(eventId);\n return {json:{eventId,email,name,source:String(event.source ?? 'unknown'),status,reason}};\n});"
+      },
+      "id": "c4adfb71-ff47-492a-8943-2867f1219b22",
+      "name": "Validate and Deduplicate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return $input.all().map(({json})=>({json:{\n eventId:json.eventId, status:json.status,\n action:json.status==='ready'?'SIMULATED_CRM_CREATE':'SKIPPED',\n note:json.status==='ready'?'Dry run only: no CRM record created and no API request sent':json.reason\n}}));"
+      },
+      "id": "9de7a211-f1a9-4c02-8fb7-a3628d2b4c33",
+      "name": "Preview CRM Actions (No API Calls)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        970,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Run Demo Manually": {
+      "main": [
+        [
+          {
+            "node": "Generate Synthetic Form Events",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Synthetic Form Events": {
+      "main": [
+        [
+          {
+            "node": "Validate and Deduplicate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate and Deduplicate": {
+      "main": [
+        [
+          {
+            "node": "Preview CRM Actions (No API Calls)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "tags": []
+}
