@@ -20,6 +20,8 @@ I take on scoped engineering work: fixing broken applications, debugging APIs an
 
 **Technical reference:** [n8n webhook and failed-execution debugging checklist](docs/n8n-debugging-checklist.md) — a practical guide to identifying failures, avoiding duplicate retries, and verifying fixes.
 
+**Importable example:** [n8n lead-intake dry-run workflow](examples/n8n-lead-intake/README.md) — synthetic validation/deduplication, no live API calls; Code node logic locally tested.
+
 - **[Fix Lovable, Bolt, Replit & Supabase app issues on Fiverr](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app)** — authentication, RLS, API failures, and application debugging.
 - **[Debug n8n workflows on Fiverr](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors)** — failed executions, webhook triggers, and API authentication.
 - **[Build n8n automations on Fiverr](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents)** — scoped integrations, webhooks, REST APIs, and workflow handoff.
