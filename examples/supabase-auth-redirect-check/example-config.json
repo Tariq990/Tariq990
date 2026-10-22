@@ -1,0 +1,8 @@
+{
+  "siteUrl": "https://example.com",
+  "redirectTo": "https://example.com/auth/callback",
+  "redirectAllowList": [
+    "https://example.com/auth/callback",
+    "http://localhost:3000/auth/callback"
+  ]
+}
