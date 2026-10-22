@@ -22,6 +22,8 @@ I take on scoped engineering work: fixing broken applications, debugging APIs an
 
 **Importable example:** [n8n lead-intake dry-run workflow](examples/n8n-lead-intake/README.md) — synthetic validation/deduplication, no live API calls; Code node logic locally tested.
 
+**Offline diagnostic:** [Supabase Auth redirect URL checker](examples/supabase-auth-redirect-check/README.md) — eight locally tested static URL/configuration checks, with explicit limits. Supports Lovable/Bolt/Replit debugging examples.
+
 - **[Fix Lovable, Bolt, Replit & Supabase app issues on Fiverr](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app)** — authentication, RLS, API failures, and application debugging.
 - **[Debug n8n workflows on Fiverr](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors)** — failed executions, webhook triggers, and API authentication.
 - **[Build n8n automations on Fiverr](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents)** — scoped integrations, webhooks, REST APIs, and workflow handoff.
