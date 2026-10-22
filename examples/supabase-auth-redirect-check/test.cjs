@@ -1,0 +1,14 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {check}=require('./check.cjs');
+const has=(obj,code)=>check(obj).issues.some(x=>x.code===code);
+const base={siteUrl:'https://example.com',redirectTo:'https://example.com/auth/callback',redirectAllowList:['https://example.com/auth/callback']};
+assert.ok(has(base,'EXACT_URL_MATCH'));
+assert.ok(has({...base,redirectTo:'https://other.invalid/auth/callback'},'NO_EXACT_REDIRECT_MATCH'));
+assert.ok(has({...base,redirectAllowList:['https://**.example.com/**']},'PATTERN_REQUIRES_MANUAL_CHECK'));
+assert.ok(has({...base,siteUrl:'bad url'},'MALFORMED_URL'));
+assert.ok(has({...base,siteUrl:'http://example.com'},'NON_HTTPS_PRODUCTION'));
+assert.ok(has({...base,redirectTo:'ftp://example.com'},'INVALID_SCHEME'));
+assert.ok(has({...base,redirectAllowList:null},'ALLOWLIST_TYPE'));
+assert.ok(!has({...base,siteUrl:'http://localhost:3000'},'NON_HTTPS_PRODUCTION'));
+console.log('PASS: 8 static redirect diagnostics');
