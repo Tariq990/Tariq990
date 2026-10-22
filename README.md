@@ -14,6 +14,15 @@ Founder at [@RecepioHQ](https://github.com/RecepioHQ).
 - **[Windows Maintenance Orchestrator](https://github.com/Tariq990/windows-maintenance-orchestrator)** — policy-driven PowerShell maintenance system with discovery, planning, dry-run/apply separation, recovery, observability, and deterministic validation.
 - **[Deep Seek Fix](https://github.com/Tariq990/deep-seek-fix)** — deterministic reliability control plane for coding agents with task contracts, governed execution, evidence ledgers, evals, and delivery gates.
 
+## Available for freelance projects
+
+I take on scoped engineering work: fixing broken applications, debugging APIs and webhooks, and building reliable integrations. For a clear quote, share the expected behavior, the error or scope, and sanitized logs.
+
+- **[Fix Lovable, Bolt, Replit & Supabase app issues on Fiverr](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app)** — authentication, RLS, API failures, and application debugging.
+- **[Debug n8n workflows on Fiverr](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors)** — failed executions, webhook triggers, and API authentication.
+- **[Build n8n automations on Fiverr](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents)** — scoped integrations, webhooks, REST APIs, and workflow handoff.
+- **[LinkedIn professional profile](https://www.linkedin.com/in/tariq--ziad/)** — discuss broader custom software and cloud development engagements.
+
 ## Engineering focus
 
 `Python` · `TypeScript` · `FastAPI` · `React` · `PostgreSQL` · `SQLite` · `Automation` · `AI Agents` · `MCP` · `Reliability` · `Developer Tooling`
