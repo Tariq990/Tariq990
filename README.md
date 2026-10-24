@@ -6,6 +6,8 @@ I build systems that **verify what software and AI agents actually did**, instea
 
 Founder of [RecepioHQ](https://github.com/RecepioHQ).
 
+**Live, no-signup browser demo:** [Try Outbound OS's AI send-policy engine](https://recepiohq.github.io/outbound-os/) — change synthetic safety conditions and see exactly which checks return PASS, HOLD, or BLOCK. Runs in the browser with **no actual messages sent**.
+
 ## Start here
 
 | Project | What it solves | Availability |
