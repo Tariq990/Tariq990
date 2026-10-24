@@ -1,38 +1,65 @@
-﻿# Tariq Ziad
+# Tariq Ziad
 
-**Software Engineer | AI & Automation Builder | Product/Systems Thinker**
+**Software Engineer · AI Agent Reliability · Developer Infrastructure · Automation**
 
-I build practical software systems, AI/agent workflows, automation, developer tooling, and products with an emphasis on reliability, explicit failure modes, and reproducible verification.
+I build systems that **verify what software and AI agents actually did**, instead of treating a successful response or command exit as proof. My work focuses on explicit trust boundaries, deterministic testing, safe tool execution, reliable recovery, and observable production behavior.
 
-Founder at [@RecepioHQ](https://github.com/RecepioHQ).
+Founder of [RecepioHQ](https://github.com/RecepioHQ).
 
-## Selected engineering work
+## Start here
 
-- **[MT5 AI Trading Runtime](https://github.com/Tariq990/mt5-ai-trading-runtime)** — Python/FastAPI/SQLite trading runtime with MT5 integration, deterministic risk gates, broker-time normalization, watchdogs, and regression tests.
-- **[Social Radar Platform](https://github.com/Tariq990/social-radar-platform)** — React/TypeScript/Express/PostgreSQL monitoring platform with tenant isolation, AI rule evaluation, authentication boundaries, and Capacitor Android.
-- **[Unified MCP Control Plane](https://github.com/Tariq990/unified-mcp-control-plane)** — TypeScript MCP gateway/control plane with OAuth 2.1 + PKCE, provider adapters, risk policy, credential redaction, and Node/Cloudflare runtimes.
-- **[Windows Maintenance Orchestrator](https://github.com/Tariq990/windows-maintenance-orchestrator)** — policy-driven PowerShell maintenance system with discovery, planning, dry-run/apply separation, recovery, observability, and deterministic validation.
-- **[Deep Seek Fix](https://github.com/Tariq990/deep-seek-fix)** — deterministic reliability control plane for coding agents with task contracts, governed execution, evidence ledgers, evals, and delivery gates.
+| Project | What it solves | Availability |
+| --- | --- | --- |
+| **[Outbound OS](https://github.com/RecepioHQ/outbound-os)** | Evidence-gated outbound workflows: verify buyer fit, message claims, authorization, and delivery state before sending | **Open source — MIT** |
+| **[Deep Seek Fix](https://github.com/Tariq990/deep-seek-fix)** | Checks coding-agent outcomes against task contracts, execution evidence, and deterministic verification gates | Source-available; non-commercial license |
+| **[Unified MCP Control Plane](https://github.com/Tariq990/unified-mcp-control-plane)** | MCP tool discovery with OAuth 2.1, policy-based execution, server-side authorization and redaction | Source-available; non-commercial license |
+| **[Windows Maintenance Orchestrator](https://github.com/Tariq990/windows-maintenance-orchestrator)** | Policy-driven update plans, bounded recovery, reboot-safe state, and verification of real machine outcomes | Source-available; non-commercial license |
 
-## Available for freelance projects
+**Try the MIT-licensed open-source project locally:**
 
-I take on scoped engineering work: fixing broken applications, debugging APIs and webhooks, and building reliable integrations. For a clear quote, share the expected behavior, the error or scope, and sanitized logs.
+```bash
+git clone https://github.com/RecepioHQ/outbound-os.git
+cd outbound-os
+npm install
+npm test
+npm run demo
+```
 
-**Technical reference:** [n8n webhook and failed-execution debugging checklist](docs/n8n-debugging-checklist.md) — a practical guide to identifying failures, avoiding duplicate retries, and verifying fixes.
+The demo uses synthetic data and does **not** send live messages. See the [Outbound OS README](https://github.com/RecepioHQ/outbound-os#readme) for requirements.
 
-**Importable example:** [n8n lead-intake dry-run workflow](examples/n8n-lead-intake/README.md) — synthetic validation/deduplication, no live API calls; Code node logic locally tested.
+**Explore agent verification without live model keys:** [Deep Seek Fix first-run guide](https://github.com/Tariq990/deep-seek-fix/blob/main/docs/quickstart.md) (available on `main` after its [documentation PR](https://github.com/Tariq990/deep-seek-fix/pull/19) is merged).
 
-**Offline diagnostic:** [Supabase Auth redirect URL checker](examples/supabase-auth-redirect-check/README.md) — eight locally tested static URL/configuration checks, with explicit limits. Supports Lovable/Bolt/Replit debugging examples.
+## Other engineering systems
 
-**Python evidence sample:** [Source citations and restricted tool-call guards](examples/rag-evidence-tool-guards/README.md) — ten passing local tests; a bounded example, not a full RAG deployment.
+- **[Social Radar Platform](https://github.com/Tariq990/social-radar-platform)** — React/Express/PostgreSQL and Capacitor Android architecture, tenant isolation, AI rule evaluation, and security-focused device ingestion. Alpha; physical-device launch gates remain open.
+- **[MT5 AI Trading Runtime](https://github.com/Tariq990/mt5-ai-trading-runtime)** — Demo-only Python/FastAPI execution architecture with broker adapters, deterministic risk controls, persistence, and failure reconciliation. Real-money execution is hard-blocked.
 
-- **[Fix Lovable, Bolt, Replit & Supabase app issues on Fiverr](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app)** — authentication, RLS, API failures, and application debugging.
-- **[Debug n8n workflows on Fiverr](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors)** — failed executions, webhook triggers, and API authentication.
-- **[Build n8n automations on Fiverr](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents)** — scoped integrations, webhooks, REST APIs, and workflow handoff.
-- **[LinkedIn professional profile](https://www.linkedin.com/in/tariq--ziad/)** — discuss broader custom software and cloud development engagements.
+## Engineering approach
 
-## Engineering focus
+`Python` · `TypeScript` · `FastAPI` · `React` · `PostgreSQL` · `SQLite` · `MCP` · `OAuth` · `CI` · `AI Agents` · `Test Automation`
 
-`Python` · `TypeScript` · `FastAPI` · `React` · `PostgreSQL` · `SQLite` · `Automation` · `AI Agents` · `MCP` · `Reliability` · `Developer Tooling`
+1. **Observe** the failure and gather reproducible evidence.
+2. **Constrain** unsafe or uncertain side effects behind explicit policy.
+3. **Fix** the smallest verified root cause.
+4. **Test** deterministic acceptance and failure paths.
+5. **Report** verified, failed, blocked, and untested outcomes separately.
 
-I prefer systems where claims are backed by observable evidence: tests, explicit contracts, state, logs, failure handling, and reproducible verification.
+I don't claim adoption, benchmark superiority, or a passing CI result without evidence.
+
+## Engineering notes and examples
+
+- [n8n debugging checklist](docs/n8n-debugging-checklist.md)
+- [n8n lead-intake dry-run workflow](examples/n8n-lead-intake/README.md) — synthetic, no live sends
+- [Supabase Auth redirect URL checker](examples/supabase-auth-redirect-check/README.md)
+- [RAG evidence and restricted tool-call guards](examples/rag-evidence-tool-guards/README.md)
+
+## Collaboration
+
+I work on application debugging, integrations, backend systems, agent infrastructure, and reliable automation. Open a well-scoped [GitHub issue for Outbound OS](https://github.com/RecepioHQ/outbound-os/issues) for project-related bugs or contributions, and consult each repository's licensing and security policy first.
+
+For commercial engagements:
+
+- [AI-generated app and Supabase debugging](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app)
+- [n8n webhook, API, and agent debugging](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors)
+- [n8n automation and integrations](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents)
+- [LinkedIn](https://www.linkedin.com/in/tariq--ziad/)
