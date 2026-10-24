@@ -8,6 +8,8 @@ Founder of [RecepioHQ](https://github.com/RecepioHQ).
 
 **Live, no-signup browser demo:** [Try Outbound OS's AI send-policy engine](https://recepiohq.github.io/outbound-os/) — change synthetic safety conditions and see exactly which checks return PASS, HOLD, or BLOCK. Runs in the browser with **no actual messages sent**.
 
+**Official MCP Registry:** [Outbound OS — active, v0.2.1](https://registry.modelcontextprotocol.io/v0.1/servers?search=outbound-os), packaged as a public local-use OCI container at `ghcr.io/recepiohq/outbound-os-mcp:0.2.1` (verified in the [read-only GitHub Actions check](https://github.com/RecepioHQ/outbound-os/actions/runs/40092801181)). This is **not** a hosted public MCP endpoint or evidence of third-party adoption.
+
 ## Start here
 
 | Project | What it solves | Availability |
