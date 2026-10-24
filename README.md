@@ -15,17 +15,14 @@ Founder of [RecepioHQ](https://github.com/RecepioHQ).
 | **[Unified MCP Control Plane](https://github.com/Tariq990/unified-mcp-control-plane)** | MCP tool discovery with OAuth 2.1, policy-based execution, server-side authorization and redaction | Source-available; non-commercial license |
 | **[Windows Maintenance Orchestrator](https://github.com/Tariq990/windows-maintenance-orchestrator)** | Policy-driven update plans, bounded recovery, reboot-safe state, and verification of real machine outcomes | Source-available; non-commercial license |
 
-**Try the MIT-licensed open-source project locally:**
+**Install the MIT-licensed [Outbound OS v0.2.0](https://github.com/RecepioHQ/outbound-os/releases/tag/v0.2.0) directly from a verified GitHub Release:**
 
 ```bash
-git clone https://github.com/RecepioHQ/outbound-os.git
-cd outbound-os
-npm install
-npm test
-npm run demo
+npm install --global https://github.com/RecepioHQ/outbound-os/releases/download/v0.2.0/outbound-os-0.2.0.tgz
+outbound-os demo --json
 ```
 
-The demo uses synthetic data and does **not** send live messages. See the [Outbound OS README](https://github.com/RecepioHQ/outbound-os#readme) for requirements.
+Requires Node.js 22+. The installation and demo were verified on Windows; the demo uses synthetic data and does **not** send live emails. This release asset is **not an npm-registry publication**. See the [Outbound OS README](https://github.com/RecepioHQ/outbound-os#readme) for the safety model and full source-install option.
 
 **Explore agent verification without live model keys:** [Deep Seek Fix first-run guide](https://github.com/Tariq990/deep-seek-fix/blob/main/docs/quickstart.md) (available on `main` after its [documentation PR](https://github.com/Tariq990/deep-seek-fix/pull/19) is merged).
 
