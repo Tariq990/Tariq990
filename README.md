@@ -59,6 +59,8 @@ I work on application debugging, integrations, backend systems, agent infrastruc
 
 For commercial engagements:
 
+- **[One-page websites for small businesses — $50 fixed](https://local-business-websites-50.tariqziad007.workers.dev/?utm_source=github&utm_medium=profile&utm_campaign=website50)** — mobile-friendly custom landing page, source files and one minor revision; paid hosting and custom domains separate. [See six independent, unofficial design concepts](https://github.com/Tariq990/local-business-demo-previews-2026) (not commissioned client work).
+
 - [AI-generated app and Supabase debugging](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app)
 - [n8n webhook, API, and agent debugging](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors)
 - [n8n automation and integrations](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents)
