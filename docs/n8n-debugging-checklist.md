@@ -91,8 +91,4 @@ Safe to share: n8n version, deployment type, expected outcome, node names, sanit
 
 ---
 
-### Need an existing n8n workflow repaired?
-
-I work on scoped debugging of failed executions, webhook triggers, API authentication, and data mapping. Send a sanitized failure example and your expected result through the [n8n bug-fix service on Fiverr](https://www.fiverr.com/tariq97ziad/fix-your-n8n-workflow-webhook-api-and-ai-agent-errors).
-
-This guide is educational and does not represent a delivered client project.
+*This guide is educational and does not represent a delivered client project.*
