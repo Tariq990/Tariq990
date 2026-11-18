@@ -23,6 +23,4 @@ Checks missing/malformed URLs, non-HTTPS production settings, and exact URL equa
 
 Official references: [Supabase Auth redirect URL guide](https://supabase.com/docs/guides/auth/redirect-urls) and [Supabase RLS guide](https://supabase.com/docs/guides/database/postgres/row-level-security).
 
-Need help with a real app? [Lovable/Bolt/Replit/Supabase debugging service on Fiverr](https://www.fiverr.com/tariq97ziad/fix-bugs-in-your-lovable-bolt-replit-or-supabase-app).
-
 Educational diagnostic only, not evidence of completed client work.

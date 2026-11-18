@@ -30,6 +30,4 @@ Local test: run "node test-demo.cjs". The script executes the exact Code node Ja
 
 See [official n8n import documentation](https://docs.n8n.io/build/manage-workflows/export-and-import) and [Code node documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 
-For a scoped real integration, [see the n8n automation service on Fiverr](https://www.fiverr.com/tariq97ziad/build-n8n-automation-workflows-with-apis-and-ai-agents).
-
 Educational sample only; no client work or revenue claims.
